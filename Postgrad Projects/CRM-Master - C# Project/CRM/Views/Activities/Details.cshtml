@@ -1,0 +1,65 @@
+﻿@model CRM.Models.Activity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Activity</legend>
+
+    <div class="display-label">
+         Subject
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActivitySubject)
+    </div>
+    <hr />
+    <div class="display-label">
+         Purpose
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActivityPurpose)
+    </div>
+    <hr />
+    <div class="display-label">
+         Status
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActivityStatus)
+    </div>
+    <hr />
+    <div class="display-label">
+         Description
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActivityDescription)
+    </div>
+    <hr />
+    <div class="display-label">
+        Reminder Email
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActivitySendReminderEmail)
+    </div>
+     <hr />
+     <div class="display-label">
+        Lead source
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Lead.LeadName)
+    </div>
+     <hr />
+     <div class="display-label">
+        Contact Source
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contact.ContactName)
+    </div>
+    <hr />
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ActivityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

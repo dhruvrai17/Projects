@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CRM.Models.Potential>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+           Type
+        </th>
+        <th>
+           Lead Source
+        </th>
+        <th>
+           Contact number
+        </th>
+        <th>
+           Potential Amount
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PotentialName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PotentialType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead.LeadName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PotentialContact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PotentialAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PotentialId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PotentialId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PotentialId })
+        </td>
+    </tr>
+}
+
+</table>

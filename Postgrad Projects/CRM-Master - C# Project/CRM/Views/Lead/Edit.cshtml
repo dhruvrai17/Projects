@@ -1,0 +1,152 @@
+﻿@model CRM.Models.Lead
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit this Lead</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Lead</legend>
+
+        @Html.HiddenFor(model => model.LeadId)
+
+        <div class="editor-label">
+            Name
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadName)
+            @Html.ValidationMessageFor(model => model.LeadName)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Title
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Title", new[] {
+            new SelectListItem() {Text = "Mr.", Value = "1"},
+            new SelectListItem() {Text = "Ms.",Value = "2" }
+            }, "Choose an option")
+        </div>
+        <hr />
+        <div class="editor-label">
+            Source
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadSource)
+            @Html.ValidationMessageFor(model => model.LeadSource)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Industry
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadIndustry)
+            @Html.ValidationMessageFor(model => model.LeadIndustry)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Annual revenue
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadAnnualRevenue)
+            @Html.ValidationMessageFor(model => model.LeadAnnualRevenue)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Company name
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadCompanyName)
+            @Html.ValidationMessageFor(model => model.LeadCompanyName)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Email
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadEmail)
+            @Html.ValidationMessageFor(model => model.LeadEmail)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Fax
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadFax)
+            @Html.ValidationMessageFor(model => model.LeadFax)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Website
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadWebsite)
+            @Html.ValidationMessageFor(model => model.LeadWebsite)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Status
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadStatus)
+            @Html.ValidationMessageFor(model => model.LeadStatus)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Number of employees
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadNoOfEmployees)
+            @Html.ValidationMessageFor(model => model.LeadNoOfEmployees)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Skype Id
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadSkypeId)
+            @Html.ValidationMessageFor(model => model.LeadSkypeId)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Facebook
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadFacebook)
+            @Html.ValidationMessageFor(model => model.LeadFacebook)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Twitter
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadTwitter)
+            @Html.ValidationMessageFor(model => model.LeadTwitter)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Address
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LeadAddress)
+            @Html.ValidationMessageFor(model => model.LeadAddress)
+        </div>
+        <hr />
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

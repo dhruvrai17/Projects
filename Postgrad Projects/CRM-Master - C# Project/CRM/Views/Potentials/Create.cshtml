@@ -1,0 +1,110 @@
+﻿@model CRM.Models.Potential
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Potential</legend>
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.UserId, new { @Value = WebSecurity.CurrentUserId })
+            @Html.ValidationMessageFor(model => model.UserId)
+        </div>
+        <div class="editor-label">
+           Name
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PotentialName)
+            @Html.ValidationMessageFor(model => model.PotentialName)
+        </div>
+        <hr />
+        <div class="editor-label">
+           Type
+        </div>
+        <div class="editor-field">
+        @Html.DropDownList("Potential Type", new[] {
+            new SelectListItem() {Text = "Owner", Value = "1"},
+            new SelectListItem() {Text = "Employee",Value = "2" }
+            }, "Choose an option")
+            </div>
+        <hr />
+        <div class="editor-label">
+           Next step
+        </div>
+        <div class="editor-field">
+        @Html.DropDownList("Next Step", new[] {
+            new SelectListItem() {Text = "Meeting", Value = "1"},
+            new SelectListItem() {Text = "Arrange a call",Value = "2" },
+            new SelectListItem() {Text = "Send an Email",Value = "3" }
+            }, "Choose an option")
+            </div>
+        <hr />
+        <div class="editor-label">
+        Lead source
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("LeadId", String.Empty)
+            @Html.ValidationMessageFor(model => model.LeadId)
+        </div>
+        <hr />
+        <div class="editor-label">
+           Contact number
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PotentialContact)
+            @Html.ValidationMessageFor(model => model.PotentialContact)
+        </div>
+        <hr />
+        <div class="editor-label">
+           Amount
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PotentialAmount)
+            @Html.ValidationMessageFor(model => model.PotentialAmount)
+        </div>
+        <hr />
+        <div class="editor-label">
+           Probability
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Probability", new[] {
+            new SelectListItem() {Text = "High", Value = "1"},
+            new SelectListItem() {Text = "Medium",Value = "2" },
+            new SelectListItem() {Text = "Low",Value = "3" }
+            }, "Choose an option")
+        </div>
+        <hr />
+        <div class="editor-label">
+           Expected revenue
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PotentialExpectedRevenue)
+            @Html.ValidationMessageFor(model => model.PotentialExpectedRevenue)
+        </div>
+        <hr />
+        <div class="editor-label">
+            Campaign source
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CampaignId", String.Empty)
+            @Html.ValidationMessageFor(model => model.CampaignId)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

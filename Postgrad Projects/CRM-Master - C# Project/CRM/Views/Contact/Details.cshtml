@@ -1,0 +1,149 @@
+﻿@model CRM.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Contact</legend>
+
+    <div class="display-label">
+        Name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactName)
+    </div>
+    <hr />
+    <div class="display-label">
+        Title
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactTitle)
+    </div>
+    <hr />
+    <div class="display-label">
+         Phone
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactPhone)
+    </div>
+    <hr />
+    <div class="display-label">
+         Email
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactEmail)
+    </div>
+    <hr />
+    <div class="display-label">
+         Contact Reports to
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactReportsTo)
+    </div>
+    <hr />
+    <div class="display-label">
+         Vendor name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactVendorName)
+    </div>
+    <hr />
+    <div class="display-label">
+         Department
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactDepartment)
+    </div>
+    <hr />
+    <div class="display-label">
+         Fax
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFax)
+    </div>
+    <hr />
+    <div class="display-label">
+        Date of birth
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactDOB)
+    </div>
+    <hr />
+    <div class="display-label">
+         Skype Id
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactSkypeId)
+    </div>
+    <hr />
+    <div class="display-label">
+         Assistant
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAssistant)
+    </div>
+    <hr />
+    <div class="display-label">
+         Assistant
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAssistantPhone)
+    </div>
+    <hr />
+    <div class="display-label">
+         Facebook
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFacebook)
+    </div>
+    <hr />
+    <div class="display-label">
+         Twitter
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactTwitter)
+    </div>
+    <hr />
+    <div class="display-label">
+         Address
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAddress)
+    </div>
+    <hr />
+    <div class="display-label">
+         Age
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAge)
+    </div>
+    <hr />
+    <div class="display-label">
+         Hobbies
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactHobbies)
+    </div>
+    <hr />
+    <div class="display-label">
+         Favourite food
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFavouriteFood)
+    </div>
+    <hr />
+    <div class="display-label">
+         Favourite sport
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFavouriteSport)
+    </div>
+    <hr />
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ContactId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

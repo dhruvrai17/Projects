@@ -1,0 +1,159 @@
+﻿@model CRM.Models.Contact
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Contact</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OwnerId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OwnerId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactReportsTo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactReportsTo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactVendorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactVendorName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactDepartment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactDepartment)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactFax)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFax)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactDOB)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactDOB)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactSkypeId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactSkypeId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactAssistant)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAssistant)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactAssistantPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAssistantPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactFacebook)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFacebook)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactTwitter)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactTwitter)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactAge)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactAge)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactHobbies)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactHobbies)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactFavouriteFood)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFavouriteFood)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactFavouriteSport)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactFavouriteSport)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

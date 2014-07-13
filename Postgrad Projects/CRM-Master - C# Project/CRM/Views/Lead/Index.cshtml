@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CRM.Models.Lead>
+
+@{
+    ViewBag.Title = "Leads";
+}
+
+<h2>Your Leads</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Name   
+        </th>
+        <th>
+            Company name  
+        </th>
+        <th>
+            Email  
+        </th>
+        <th>
+            Fax  
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeadName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeadCompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeadEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeadFax)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LeadId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LeadId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LeadId })
+        </td>
+    </tr>
+}
+
+</table>

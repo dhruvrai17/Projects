@@ -1,0 +1,120 @@
+﻿@model CRM.Models.Lead
+
+@{
+    ViewBag.Title = "Lead Details";
+}
+
+<h2>Lead Details</h2>
+
+<fieldset>
+    <legend>Lead</legend>
+
+    <div class="display-label">
+         Name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadName)
+    </div>
+    <hr />
+    <div class="display-label">
+         Title
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadTitle)
+    </div>
+    <hr />
+    <div class="display-label">
+         Source
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadSource)
+    </div>
+    <hr />
+    <div class="display-label">
+         Industry
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadIndustry)
+    </div>
+    <hr />
+    <div class="display-label">
+         Annual revenue
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadAnnualRevenue)
+    </div>
+    <hr />
+    <div class="display-label">
+         Company
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadCompanyName)
+    </div>
+    <hr />
+    <div class="display-label">
+         Email
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadEmail)
+    </div>
+    <hr />
+    <div class="display-label">
+         Fax
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadFax)
+    </div>
+    <hr />
+    <div class="display-label">
+         Website
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadWebsite)
+    </div>
+    <hr />
+    <div class="display-label">
+         Status
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadStatus)
+    </div>
+    <hr />
+    <div class="display-label">
+         Number of employees
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadNoOfEmployees)
+    </div>
+    <hr />
+    <div class="display-label">
+         Skype Id
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadSkypeId)
+    </div>
+    <hr />     
+    <div class="display-label">
+         Facebook
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadFacebook)
+    </div>
+    <hr />
+    <div class="display-label">
+         Twitter
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadTwitter)
+    </div>
+    <hr />
+    <div class="display-label">
+         Address
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeadAddress)
+    </div>
+    <hr />
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.LeadId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

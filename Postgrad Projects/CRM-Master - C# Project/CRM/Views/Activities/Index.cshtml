@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CRM.Models.Activity>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+           Activity
+        </th>
+        <th>
+           Purpose
+        </th>
+        <th>
+           Status
+        </th>
+        <th>
+           Description
+        </th>
+        <th>
+           Email
+        </th>
+        <th>
+            Contact info
+        </th>
+        <th>
+            Lead info
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivitySubject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivityPurpose)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivityStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivityDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivitySendReminderEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact.ContactName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead.LeadName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ActivityId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ActivityId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ActivityId })
+        </td>
+    </tr>
+}
+
+</table>

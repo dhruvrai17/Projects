@@ -1,0 +1,83 @@
+﻿@model CRM.Models.Potential
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Potential</legend>
+
+    <div class="display-label">
+         Name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialName)
+    </div>
+    <hr />
+    <div class="display-label">
+         Type
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialType)
+    </div>
+    <hr />
+    <div class="display-label">
+        Next step
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialNextStep)
+    </div>
+    <hr />
+    <div class="display-label">
+        Lead source
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialLeadSource)
+    </div>
+    <hr />
+    <div class="display-label">
+        Contact number
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialContact)
+    </div>
+    <hr />
+    <div class="display-label">
+        Potential amount
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialAmount)
+    </div>
+    <hr />
+    <div class="display-label">
+        probability
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.potentialProbability)
+    </div>
+    <hr />
+    <div class="display-label">
+        Expected revenue
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialExpectedRevenue)
+    </div>
+    <hr />
+    <div class="display-label">
+        Campaign source
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialCampaignSource)
+    </div>
+    <hr />
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

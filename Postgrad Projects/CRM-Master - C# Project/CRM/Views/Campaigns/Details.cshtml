@@ -1,0 +1,72 @@
+﻿@model CRM.Models.Campaign
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Campaign</legend>
+
+    <div class="display-label">
+         Name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignName)
+    </div>
+    <hr />
+    <div class="display-label">
+         Start date
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignStartDate)
+    </div>
+    <hr />
+    <div class="display-label">
+        End date
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignEndDate)
+    </div>
+    <hr />
+    <div class="display-label">
+         Status
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignStatus)
+    </div>
+    <hr />
+    <div class="display-label">
+        Expected revenue
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignExpectedRevenue)
+    </div>
+    <hr />
+    <div class="display-label">
+        Actual cost
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignActualCost)
+    </div>
+    <hr />
+    <div class="display-label">
+        Budgeted cost
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignBudgetedCost)
+    </div>
+    <hr />
+    <div class="display-label">
+         Expected response
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CampaignExpectedResponse)
+    </div>
+    <hr />
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CampaignId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

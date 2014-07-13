@@ -1,0 +1,10 @@
+﻿<h1>My Latest Tweets</h1>
+<ul>
+  @foreach (var tweet in Model.Tweets)
+  {
+    <li>
+      <img src="@tweet.user.profile_image_url" />
+      @tweet.text
+    </li>
+  }
+</ul>

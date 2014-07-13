@@ -1,0 +1,80 @@
+﻿@model CRM.Models.Potential
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Potential</legend>
+
+    <div class="display-label">
+
+    <div class="display-label">
+        Name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialName)
+    </div>
+    <hr />
+    <div class="display-label">
+        Type
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialType)
+    </div>
+    <hr />
+    <div class="display-label">
+        Next step
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialNextStep)
+    </div>
+    <hr />
+    <div class="display-label">
+        Lead source
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Lead.LeadName)
+    </div>
+    <hr />
+    <div class="display-label">
+        Contact
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialContact)
+    </div>
+    <hr />
+    <div class="display-label">
+        Potential amount
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialAmount)
+    </div>
+    <hr />
+    <div class="display-label">
+        Probability
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.potentialProbability)
+    </div>
+    <hr />     
+    <div class="display-label">
+        Expected revenue
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PotentialExpectedRevenue)
+    </div>
+    <hr />
+    <div class="display-label">
+        Campaign source
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Campaign.CampaignName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PotentialId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

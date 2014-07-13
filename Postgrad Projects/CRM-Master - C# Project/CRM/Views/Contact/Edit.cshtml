@@ -1,0 +1,182 @@
+﻿@model CRM.Models.Contact
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Contact</legend>
+
+        <div class="editor-label">
+            Name
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactName)
+            @Html.ValidationMessageFor(model => model.ContactName)
+        </div>
+
+        <div class="editor-label">
+            Title
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Title", new[] {
+            new SelectListItem() {Text = "Mr.", Value = "1"},
+            new SelectListItem() {Text = "Ms.",Value = "2" }
+            }, "Choose an option")
+        </div>
+
+        <div class="editor-label">
+            Phone
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactPhone)
+            @Html.ValidationMessageFor(model => model.ContactPhone)
+        </div>
+
+        <div class="editor-label">
+           Email
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactEmail)
+            @Html.ValidationMessageFor(model => model.ContactEmail)
+        </div>
+
+        <div class="editor-label">
+           Reports to
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactReportsTo)
+            @Html.ValidationMessageFor(model => model.ContactReportsTo)
+        </div>
+
+        <div class="editor-label">
+           Vendor name
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactVendorName)
+            @Html.ValidationMessageFor(model => model.ContactVendorName)
+        </div>
+
+        <div class="editor-label">
+           Department
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactDepartment)
+            @Html.ValidationMessageFor(model => model.ContactDepartment)
+        </div>
+
+        <div class="editor-label">
+           Fax
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactFax)
+            @Html.ValidationMessageFor(model => model.ContactFax)
+        </div>
+
+        <div class="editor-label">
+           Date of birth
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactDOB)
+            @Html.ValidationMessageFor(model => model.ContactDOB)
+        </div>
+
+        <div class="editor-label">
+            Skype Id
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactSkypeId)
+            @Html.ValidationMessageFor(model => model.ContactSkypeId)
+        </div>
+
+        <div class="editor-label">
+           Contact assistant
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactAssistant)
+            @Html.ValidationMessageFor(model => model.ContactAssistant)
+        </div>
+
+        <div class="editor-label">
+           Assistant phone
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactAssistantPhone)
+            @Html.ValidationMessageFor(model => model.ContactAssistantPhone)
+        </div>
+
+        <div class="editor-label">
+            Facebook
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactFacebook)
+            @Html.ValidationMessageFor(model => model.ContactFacebook)
+        </div>
+
+        <div class="editor-label">
+           Twitter
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactTwitter)
+            @Html.ValidationMessageFor(model => model.ContactTwitter)
+        </div>
+
+        <div class="editor-label">
+           Address
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactAddress)
+            @Html.ValidationMessageFor(model => model.ContactAddress)
+        </div>
+
+        <div class="editor-label">
+           Age
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactAge)
+            @Html.ValidationMessageFor(model => model.ContactAge)
+        </div>
+
+        <div class="editor-label">
+           Hobbies
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactHobbies)
+            @Html.ValidationMessageFor(model => model.ContactHobbies)
+        </div>
+
+        <div class="editor-label">
+           Favourite food
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactFavouriteFood)
+            @Html.ValidationMessageFor(model => model.ContactFavouriteFood)
+        </div>
+
+        <div class="editor-label">
+           Favourite Sport
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactFavouriteSport)
+            @Html.ValidationMessageFor(model => model.ContactFavouriteSport)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
